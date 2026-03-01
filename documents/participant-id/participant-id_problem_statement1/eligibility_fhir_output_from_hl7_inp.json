@@ -1,0 +1,44 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [ {
+    "resource": {
+      "resourceType": "Patient",
+      "id": "12345",
+      "name": [ {
+        "text": "Doe John"
+      } ],
+      "gender": "male"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Organization",
+      "name": "ABC Insurance"
+    }
+  }, {
+    "resource": {
+      "resourceType": "Coverage",
+      "contained": [ {
+        "resourceType": "Organization",
+        "id": "1",
+        "name": "ABC Insurance"
+      } ],
+      "status": "active",
+      "subscriberId": "POL998877",
+      "payor": [ {
+        "reference": "#1"
+      } ]
+    }
+  }, {
+    "resource": {
+      "resourceType": "Condition",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "44054006",
+          "display": "Type 2 diabetes mellitus"
+        } ]
+      }
+    }
+  } ]
+}
