@@ -121,6 +121,28 @@ Builders --> Output[FHIR Bundle Output: Patient, Coverage, Claim, Condition]
 
 ---
 
+```mermaid
+graph TD
+Controller[TransformController API] --> AdapterFactory[Adapter Factory]
+Controller --> AIService[AI Intelligence Service]
+Controller --> UseCaseFactory[UseCase Factory]
+
+    AdapterFactory --> HL7[HL7 Adapter]
+    AdapterFactory --> CSV_E[Csv Eligibility Adapter]
+    AdapterFactory --> CSV_C[Claim Csv Adapter]
+
+    HL7 & CSV_E & CSV_C --> Model[Canonical Models]
+
+    Model --> AIService
+    AIService --> Builders[FHIR Builders]
+
+    UseCaseFactory --> EBuilder[Eligibility Builder]
+    UseCaseFactory --> CBuilder[Claim Builder]
+
+    EBuilder & CBuilder --> Output[FHIR Bundle Output]
+```
+    
+
 ## 🤖 Where AI Fits
 
 AI operates **after normalization but before FHIR generation**.
@@ -236,6 +258,14 @@ Stateless design enables:
 * Load balancing
 
 ---
+
+```mermaid
+timeline
+title NHCX Platform Roadmap
+Phase 1 : Modular Monolith : Strategy & Factory Patterns : Fast Iteration
+Phase 2 : Domain-Based Services : Ingestion Service : Terminology Service : Workflow Services
+Phase 3 : Event-Driven Architecture : Kafka Streams : Async Transformation : Kubernetes Scaling
+```
 
 ## 🎯 Why This Matters for NHCX / ABDM
 
