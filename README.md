@@ -25,6 +25,9 @@ The platform:
 
 Instead of every hospital implementing FHIR, the platform **bridges existing systems into the national health ecosystem.**
 
+## 🎥 Demo Video
+
+[▶ Watch the 3-minute demo](https://drive.google.com/file/d/1alQ_ci_bq6ZpMYAP5DhYxITtExCgvW1B/view?usp=share_link)
 ---
 
 ## 🧠 Why This Is Different (Not Just a Converter)
