@@ -84,6 +84,15 @@ Pipeline:
 ```
 Source → Adapter → Canonical Model → AI Layer → FHIR Builder → FHIR Bundle
 ```
+graph TD
+Sources[Source Systems: HL7 / CSV / APIs] --> Ingestion[Ingestion Layer: Strategy Adapters]
+Ingestion --> Canonical[Canonical Domain Model: EligibilityDTO / ClaimDTO]
+Canonical --> AI[AI Intelligence Layer: Semantic Normalization & Risk Detection]
+AI --> Builders[FHIR Use Case Builders: Eligibility / Claim]
+Builders --> Output[FHIR Bundle Output: Patient, Coverage, Claim, Condition]
+
+    style AI fill:#f96,stroke:#333,stroke-width:2px
+    style Canonical fill:#bbf,stroke:#333,stroke-width:2px
 
 ### Layer Responsibilities
 
