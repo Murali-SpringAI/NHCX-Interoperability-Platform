@@ -84,6 +84,7 @@ Pipeline:
 ```
 Source → Adapter → Canonical Model → AI Layer → FHIR Builder → FHIR Bundle
 ```
+```mermaid
 graph TD
 Sources[Source Systems: HL7 / CSV / APIs] --> Ingestion[Ingestion Layer: Strategy Adapters]
 Ingestion --> Canonical[Canonical Domain Model: EligibilityDTO / ClaimDTO]
@@ -93,6 +94,7 @@ Builders --> Output[FHIR Bundle Output: Patient, Coverage, Claim, Condition]
 
     style AI fill:#f96,stroke:#333,stroke-width:2px
     style Canonical fill:#bbf,stroke:#333,stroke-width:2px
+```
 
 ### Layer Responsibilities
 
