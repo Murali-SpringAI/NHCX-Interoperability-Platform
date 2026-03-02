@@ -2,6 +2,7 @@
 
 **AI-ready healthcare interoperability middleware that converts heterogeneous healthcare data (HL7, CSV, legacy systems) into standardized FHIR bundles across multiple workflows — Eligibility and Claims — without rewriting core logic.**
 
+📖 Read: Why healthcare interoperability is hard → docs/WHY_INTEROPERABILITY.md
 ---
 
 ## 🚀 30-Second Pitch
